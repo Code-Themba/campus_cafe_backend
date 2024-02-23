@@ -8,11 +8,13 @@ const {
     updateUserProfile
 } = require('../controllers/usersContoller'); 
 
-router.delete('/delete-profile',deleteUserProfile)
-router.get('/get-profile', getUserProfile);
-router.post('/login', loginUser)
-router.post('/logout', logoutUser)
-router.post('/register', registerUser)
-router.put('/update-profile', updateUserProfile)
+const protectRoutes = require('../middleware/authMiddleware');
+
+router.delete('/delete-profile', protectRoutes, deleteUserProfile);
+router.get('/get-profile', protectRoutes, getUserProfile);
+router.post('/login', loginUser);
+router.post('/logout', protectRoutes, logoutUser);
+router.post('/register', registerUser);
+router.put('/update-profile', protectRoutes, updateUserProfile);
 
 module.exports = router;

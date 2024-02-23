@@ -13,4 +13,14 @@ const generateToken = (res, userId) => {
     })
 };
 
-module.exports = generateToken;
+const destroyToken = (res) => {
+    res.cookie('authToken', '', {
+        httpOnly: true,
+        expires: new Date(0)
+    });
+}
+
+module.exports = {
+    destroyToken,
+    generateToken,
+};
