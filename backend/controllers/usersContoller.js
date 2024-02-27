@@ -68,7 +68,7 @@ const loginUser = asyncHandler(async (req, res) => {
 //access    -   Private
 const logoutUser = asyncHandler(async (req, res) => { 
     destroyToken(res);
-    res.status(200).send('User Logged Out Successfully...')
+    res.status(200).json({ messa: 'User Logged Out Successfully...' });
 });
 
 //Route     -   /api/account/get-profile
@@ -82,10 +82,10 @@ const registerUser = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error('User with that email already exists. Please try a different email address.');
     }
-    else if (password !== confirm_password) { 
-        res.status(400);
-        throw new Error('Please make sure passwords match.');
-    }
+    // else if (password !== confirm_password) { 
+    //     res.status(400);
+    //     throw new Error('Please make sure passwords match.');
+    // }
     else if(!isPasswordValid(password)){
         res.status(400);
         throw new Error('Password must be between 8 and 20 characters long and contain letters, numbers and special characterse e.g("@", "$",".","#","!", "%", "*", "?", "&", "^").');
