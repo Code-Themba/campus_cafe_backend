@@ -35,7 +35,7 @@ const LoginPage = () => {
   }
 
   return (
-      <form onSubmit={submitHandler} className='mt-5 mx-auto pt-3 rounded-md px-8 md:w-2/3 lg:w-3/4 sm:w-2/3 border border-slate-400'>
+      <form onSubmit={submitHandler} className='mt-5 mx-auto pt-3 rounded-md px-8 sm:w-2/3 md:1/3 w-2/3 border border-slate-400'>
         <h1 className='mb-4 text-4xl text-center font-bold'>Login</h1>
           <div className="form-group p-2">
             <label className="block font-semibold text-xl" htmlFor="email">Email Address</label>

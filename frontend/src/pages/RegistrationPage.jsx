@@ -36,7 +36,7 @@ const RegistrationPage = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='m-5 mx-auto pt-3 rounded-md px-8 md:w-2/3 lg:w-3/4 sm:w-2/3 border border-slate-400'>
+    <form onSubmit={handleSubmit} className='m-5 mx-auto pt-3 rounded-md px-8 sm:w-3/5 border border-slate-400'>
         <h1 className='mb-4 text-4xl text-center font-bold'>Register</h1>
         <div className="py-1 mb-1 flex justify-center">
               <Link className="p-2 w-3/4 border border-slate-400 rounded-md bg-slate-200 hover:bg-slate-100 flex justify-center text-center text-lg font-bold" to="#"><FcGoogle className="mt-1 mr-1" />Register With Google</Link>
@@ -46,7 +46,7 @@ const RegistrationPage = () => {
           </div>
           <div className="form-group p-1">
             <label className="block font-semibold text-xl" htmlFor="firstname">First name</label>
-          <input type="text"
+          <input autocomplete="off" type="text"
             name="firstname" id="firstname" className="p-2 border border-slate-600 rounded w-full text-start"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
@@ -54,33 +54,33 @@ const RegistrationPage = () => {
         </div>
         <div className="form-group p-1">
             <label className="block font-semibold text-xl" htmlFor="lastname">Last name</label>
-          <input type="text" name="lastname" id="lastname" className="p-2 border border-slate-600 rounded w-full text-start"
+          <input autocomplete="off" type="text" name="lastname" id="lastname" className="p-2 border border-slate-600 rounded w-full text-start"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             placeholder='Enter last name...' />
         </div>
         <div className="form-group p-1">
             <label className="block font-semibold text-xl" htmlFor="email">Email Address</label>
-          <input type="email" name="email" id="email" className="p-2 border border-slate-600 rounded w-full text-start"
+          <input autocomplete="off" type="email" name="email" id="email" className="p-2 border border-slate-600 rounded w-full text-start"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder='Enter Email Address...' />
         </div>
           <div className="form-group p-1 mb-2">
             <label className="block font-semibold text-xl" htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" className="p-2 border border-slate-600 focus-visible:border-slate-400 rounded w-full text-start"
+          <input autocomplete="off" type="password" name="password" id="password" className="p-2 border border-slate-600 focus-visible:border-slate-400 rounded w-full text-start"
             value={password}
             onChange={(e) => setPassword(e.target.value)}placeholder='Enter Password...' />
           </div>
           <div className="form-group p-1 mb-2">
             <label className="block font-semibold text-xl" htmlFor="confirm_password">Confirm Password</label>
-          <input type="password" name="confirm_password" id="confirm_password" className="p-2 border border-slate-600 focus-visible:border-slate-400 rounded w-full text-start"
+          <input autocomplete="off" type="password" name="confirm_password" id="confirm_password" className="p-2 border border-slate-600 focus-visible:border-slate-400 rounded w-full text-start"
             value={confirm_password}
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder='Confirm Password...' />
           </div>
           <div className="form-group p-2">
-              <button type='submit' className="rounded-md py-2 px-5 font-bold bg-blue-700 text-white hover:bg-blue-500">Login</button>
+              <button type='submit' className="rounded-md py-2 px-5 font-bold bg-blue-700 text-white hover:bg-blue-500">Register</button>
           </div>
 
           <p className='p-2'>Already have an account? <Link className='text-blue-800 underline' to='/login'>login</Link></p>

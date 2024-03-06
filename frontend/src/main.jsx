@@ -8,6 +8,7 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } 
 import HomePage from './pages/HomePage.jsx';
 import RegistrationPage from './pages/RegistrationPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
+import CartPage from './pages/CartPage.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
       <Route path='/' exact element={ <HomePage />} />
       <Route path='/login' element={ <LoginPage />} />
       <Route path='/register' element={ <RegistrationPage />} />
+      <Route path='/cart' element={ <CartPage />} />
     </Route>
   )
 )
